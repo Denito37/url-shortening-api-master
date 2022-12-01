@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+:root{
+    --btn-clr:hsl(180, 66%, 49%);
+    --bg-itms:hsl(257, 27%, 26%);
+    --ftr-clr:hsl(260, 8%, 14%);
+    --ftr-text:hsl(0, 0%, 75%);
+    --txt-clr:hsl(257, 7%, 63%);
+    --hd-clr:hsl(260, 8%, 14%);
+}
+/* *General */
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 1.125rem;
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+button{
+    padding: .5rem 1rem;
+    background-color: var(--btn-clr);
+    color: #fff;
+    border: solid 0px;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 3rem;
+}
+button:hover{
+    filter: brightness(1.2);
+}
+p{
+    color: var(--txt-clr);
+}
+h1, h2, h3, h6{
+    color: var(--hd-clr);
+}
+/* *Header */
+header{
+    text-align: left;
+    padding: 1rem;
+}
+header img{
+    max-width: 100%;
+}
+header ul{
+    display: none;
+}
+header button{
+    display: none;
+}
+/* *Main */
+main{
+    justify-content: center;
+    padding: 2rem;
+}
+main img{
+    max-width: 100%;
+    position: relative;
+    left: 4rem;
+}
+/* *API */
+.shorten{
+    margin: 1rem;
+    padding: 2rem 1rem;
+    background: url(images/bg-shorten-mobile.svg) no-repeat top right var(--bg-itms);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    border-radius: 1rem;
+}
+.shorten input[type = text]{
+    padding: .7rem 1rem;
+    font-size: 1.125rem;
+}
+.shorten button{
+    border-radius: 1rem;
+}
+/* *Section */
+.contain{
+    background-color: hsl(0, 0%, 95%);
+}
+.advS{
+    padding: 2rem;
+}
+.stats{
+    margin-bottom: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+.stats article{
+    background-color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+.stats img{
+    background-color: var(--bg-itms);
+    padding: 1rem;
+    border-radius: 30%;
+    position: relative;
+    bottom: 2.5rem;
+}
+.boost{
+    background: url(images/bg-boost-mobile.svg) no-repeat top right  var(--bg-itms);
+    padding: 3rem 1rem;
+}
+.boost h2{
+    color: #fff;
+}
+/* *FOOTER */
+footer{
+    background-color: var(--ftr-clr);
+}
+footer svg{
+    padding: 3rem 1rem 1rem 1rem;
+}
+footer h6{
+    color: #fff;
+}
+footer small{
+    display: block;
+    color: var(--ftr-text);
+    line-height: 2;
+}
+footer small:hover{
+    color: var(--btn-clr);
+}
+footer .socials{
+    word-spacing: 1rem;
+    padding: 2rem 1rem;
+}
+.attribution{
+    display: none;
+}
+/* *desktop */
+@media (min-width: 769px){
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    main img{
+        max-width: 70%;
+    }
+    header{
+        margin: 1rem 5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    header ul , header button{
+        display: inline;
+    }
+    header .login{
+        background-color: transparent;
+        color: var(--txt-clr);
+    }
+    header a{
+        color: var(--txt-clr);
+        text-decoration: none;
+        padding: .5rem 1rem;
+    }
+    header a:hover{
+        color: var(--hd-clr);
+    }
+    main .txt{
+        padding: 5rem;
+        text-align: left;
+    }
+    main .txt h1{
+        font-size: 3rem;
+    }
+    .shorten{
+        display: flex;
+        flex-direction: row;
+        background: url(images/bg-shorten-desktop.svg) var(--bg-itms);
+        margin: 1rem 5rem;
+        padding: 2rem 4rem;
+        column-gap: 2rem;
+        position: relative;
+        top: 4.5rem;
+    }
+    .shorten button{
+        padding:.5rem 2.5rem; ;
+    }
+    .advS{
+        margin-top: 2.5rem;
+    }
+    .advS h2{
+        font-size: 2.5rem;
+    }
+    .stats{
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        column-gap: 2rem;
+        margin: 4rem 5rem;
+    }
+    .stats article:first-child{
+        position: relative;
+        bottom: 2.5rem;
+    }
+    .stats article:last-child{
+        position: relative;
+        top: 2.5rem;
+    }
+    .boost{
+        background: url(images/bg-boost-desktop.svg) var(--bg-itms);
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+    }
+}
